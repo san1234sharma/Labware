@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Product List{% endblock title %}
+{% block body %}
+{% load static %}
+<section id="hero4">
+  <div class="hero2-container">
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+</section>
+
+<div class="container mt-8">
+    <div class="row">
+      <div class="col-md-8">
+        <img src="/media/{{ product.image }}"  alt="{{ product.product_name }}" class="img-fluid " height="400px" width="300px" >
+      </div>
+      <div class="col-md-6">
+        <h2>{{ product.product_name }}</h2>
+        <p class="lead">Description:</p>
+        <p>{{ product.desc }}</p>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+{% endblock body %}

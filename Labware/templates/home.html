@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<section id="hero">
+  <div class="hero-container">
+    {% block content %}
+
+    {% endblock content %}
+    <!-- <div class="col-md-5 p-lg-5 mx-5 my-5" style="color: black;">
+      <!-- <h6 class="display-8" style="color: white;">"Your partner for Chemical,Pharmaceutical,Polymer Research & Process Development."</h6> -->
+      <!-- <a class="btn btn-outline-secondary my-3 " style="background-color: lightcyan; color: black;" href="/about">About us</a> -->
+    </div> -->
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+</section>
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{% static '/images/about1.jpg' %}" alt="Labware" width="500rem">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 lh-1 mb-3">About us</h1>
+        <p class="lead">THE GLASS COMAPNY INC is an DSO 901:2023 proprietary enterprise established in 2023which specialises in the
+          manufacturing of quality scientific, laboratory and custom design glassware for education, research, process, quality control and industrial applications. 
+         The company also provides technical consultancy and delivers apt solutions in the design and manufacture of glassware for its clients both within Nation and abroad.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="services" class="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h1>Services</h1>
+        <h3>Our services are included in various fields</h3>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bxl-dribbble"></i></div>
+            <h4 class="title"><a>Borosilicate and quartz scientific glassblowing</a></h4>
+            <p class="description">Borosilicate and quartz are primary materials used in scientific glassblowing due to their exceptional properties, allowing for the creation of durable, heat-resistant glassware vital for laboratory settings, catering to different experimental needs, and providing thermal shock resistance and chemical inertness.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-file"></i></div>
+            <h4 class="title"><a>Custom Design glass fabrication</a></h4>
+            <p class="description">Custom design glass fabrication entails crafting unique glass products tailored to specific client needs, employing various techniques such as glassblowing, cutting, etching, and assembly for bespoke creations.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-tachometer"></i></div>
+            <h4 class="title"><a>Prototype and development projects</a></h4>
+            <p class="description">Prototype and development projects involve the creation and refinement of initial models or versions of products, systems, or technology to test and enhance their functionality, design, and feasibility before full-scale production or implementation.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box">
+            <div class="icon"><i class="bx bx-world"></i></div>
+            <h4 class="title"><a>Graduating, grinding, and cutting</a></h4>
+            <p class="description">Graduating, grinding, and cutting are crucial processes in the realm of glasswork, involving the meticulous shaping, smoothing, and resizing of glass materials to achieve specific dimensions, shapes, and finishes for diverse applications in industries such as manufacturing, art, and scientific instrumentation.
+
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+{% endblock body %}

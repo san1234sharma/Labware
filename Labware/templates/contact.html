@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Contact-Us{% endblock title %}
+{% block body %}
+<section id="hero5">
+  <div class="hero2-container">
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+</section>
+<section id="contact" class="contact my-5">
+  <div class="container">
+    <div class="section-title" >
+      <br>
+      <br>
+      <h1>Contact</h1>
+      <p>Thank you for your interest in The Glass Comapny INC. Whether you have a question, need assistance, or want to explore collaboration opportunities, we're here to help.</p>
+      <div class="container mt-10">
+
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <form action="/contact" method="post">
+              {% csrf_token %}
+              <br>
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control p-2" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control p-2" id="email" name="email" value="{{user.email}}" required>
+              </div>
+              <div class="form-group">
+                <label for="pnumber">Phone Number</label>
+                <input type="number" class="form-control p-2" id="pnumber" name="pnumber" required>
+              </div>
+              <div class="form-group">
+                <label for="query">Your Query</label>
+                <textarea class="form-control p-2" id="query" name="query" required></textarea>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-dark">Submit</button>
+              <br>
+            </form>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+    <!-- <div>
+      <iframe style="border: 0; width: 100%; height: 270px;" src="https://www.google.com/maps/place/Shree+Labware+and+Process+Systems,+141,+2nd+H+Main+Rd,+East+of+NGEF+Layout,+Kasturi+Nagar,+Bengaluru,+Karnataka+560043/@13.002699,77.6627116,17z/data=!4m6!3m5!1s0x3bae11304941d4c5:0x3b7c538042f4a353!8m2!3d13.002699!4d77.6627116!16s%2Fg%2F11js_dk8gz" frameborder="0" allowfullscreen=""></iframe>
+    </div> -->
+    <br>
+    <br>
+    <br>
+    <div class="row mt-4">
+      <div class="col-lg-8">
+        <div class="info" >
+          <div class="address">
+            <h4>Location:</h4>
+            <p>Registered Office: No 141, 2 H main,DEWNNWLL,DENMARK <br>Manufacturing Unit: No 9,Ruther Industrial Estate, Opp. TTK Old Nuclear Road,Dasttch,DENMARK – 7865</p>
+          </div>
+          <div class="email">
+            <h4>Email:</h4>
+            <p>thegalsscompany.com<br>glasscompanylabware@gmail.com</p>
+          </div>
+          <div class="phone">
+            <h4>Call:</h4>
+            <p>+61 9******98/ +61 9546472**9</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

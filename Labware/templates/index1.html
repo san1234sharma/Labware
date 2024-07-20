@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block title %}Home
+{% endblock title %}
+{% block body %}
+{% load static %}
+<section id="hero2">
+  <div class="hero2-container">
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+</section>
+
+
+</div>
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <h2>Welcome </h2>
+      <h3>Check our <span>Products</span></h3>
+    </div>
+
+    {% for product, range, nSlides in allProds %}
+
+    <h3 class="my-3 text-center text-success bg-light">
+      {{product.0.category}} PROductLine
+    </h3>
+
+    <div class="container">
+      <div class="row">
+
+        {% for i in product %}
+        <div class="col-md-3 mt-3">
+          <img src="/media/{{i.image}}" class="card-img-top" alt="not found" height="200px" width="150px  padding: 20px 20py " />
+          <div class="card-body">
+            <h5 class="card-title mt-2" id="namepr{{i.id}}">{{i.product_name}}</h5>
+            <p class="card-text">{{i.desc|slice:"0:53"}}...</p>
+            <h6 class="card-title mb-3">
+              Price:<span id="pricepr{{i.id}}">{{i.price}}</span>
+            </h6>
+  
+
+            <a href="/media/{{i.image}}">
+              <button class="btn btn-info btn-sm cart">View<i class="fa-solid fa-eye p-0"></i></button>
+              </a
+            >
+          </div>
+        </div>
+
+        
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+  </div>
+</section><!-- End Portfolio Section -->
+
+<!-- java script tags -->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<!-- end of java scripts -->
+
+<!-- cart ufnctions java script -->
+
+{% endblock body %}

@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% block title %}Products{% endblock title %}
+{% block body %}
+{% load static %}
+<section id="hero2">
+  <div class="hero2-container">
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+</section>
+
+<div id="productlist">
+  <body >
+  <h2>Custom Glassware Products</h2>
+<!--  
+  <p>This is a comprehensive list of <strong>custom-made glassware</strong> and laboratory equipment suitable for research, process industries, pharmaceuticals, and research institutes.</p>
+    <div class="products">
+      <ul>
+      <li><strong>Jacketed Reactor Systems (100 ml to 20 liters)</strong></li>
+      <li><strong>Glass Wiping Film Evaporators</strong></li>
+      <li><strong>Glass Short Path Distillation Units</strong></li>
+      <li><strong>Glass Filter Reactors, Nutsche Filter Units (1 litre to 20 litre capacity)</strong></li>
+      <li><strong>Glass Laboratory Fractional Distillation Systems with Insulated Columns and Structured Packing</strong></li>
+      <li><strong>Jointed Laboratory Glassware (Adapters, Condensers, Flasks, Columns, Custom-made Glassware)</strong></li>
+      <li><strong>Glass Threaded Interchangeable Ground Joints (similar to Rodaviss)</strong></li>
+      <li><strong>Glassware Spares for All Makes Rotary Evaporators</strong></li>
+      <li><strong>Schlenk Line Glassware (Manifolds, Reaction Tubes, Flasks, etc.)</strong></li>
+      <li><strong>Water Still</strong></li>
+      <li><strong>Spares for All Makes of Rotary Evaporators</strong></li>
+      <li><strong>All Glass Distillation Assemblies and Industrial Process Systems</strong></li>
+      <li><strong>Lab Equipment and Allied Labware Products</strong></li>
+      <li><strong>Filtration Products</strong></li>
+      <li><strong>PTFE and Lab Metal Ware</strong></li>
+      <li><strong>Silicone and Other Specialized Tubing Requirements</strong></li>
+      <li><strong>Liquid Handling Products</strong></li>
+      <li><strong>Interchangeable Laboratory Glassware for Chemical Synthesis Labs</strong></li>
+      <li><strong>Glassware for Other OEM Manufacturers</strong></li>
+      <li><strong>Jacketed Reaction Systems for Process Development in Pharma Industries</strong></li>
+      <li><strong>Calibrated Volumetric Glassware</strong></li>
+      <li><strong>Glassware for Export</strong></li>
+      <li><strong>Volumetric Glassware</strong></li>
+      <li><strong>Liquid Handling Systems</strong></li>
+      <li><strong>Industrial Glassware Systems (up to 200 litre capacity) and Overhead Assemblies for Reactors</strong></li>
+      <li><strong>Other Laboratory Equipments</strong></li>
+       </ul>
+    </body>
+  </div>
+</div>
+ -->
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <!-- <h3>Check out our <span>Products</span></h3> -->
+    </div>
+    
+    {% for products, slides, nSlides in allProds %}
+      <h3 class="my-3 text-center text-success flash-sale-heading">
+        {{ products.0.category }}
+      </h3>
+
+      <div class="product-album py-5" style="background-color: rgb(250, 253, 255);">
+        <div class="container">
+          <div class="row">
+            {% for product in products %}
+              <div class="col-md-4">
+                <div class="product-card">
+                  <img src="/media/{{ product.image }}" alt="{{ product.product_name }}" height="300px" width="250px">
+                  <div class="card-body">
+                    <h5 class="card-title product-title" id="namepr{{ product.id }}">{{ product.product_name }}</h5>
+                    <p class="card-text product-description">{{ product.desc|slice:"0:53" }}...</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <a href="{% url 'product_details' product.product_id %}" class="btn btn-sm btn-outline-secondary">View</a>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- End Portfolio Section -->
+
+<!-- JavaScript files -->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="../assets/js/main.js"></script>
+{% endblock body %}

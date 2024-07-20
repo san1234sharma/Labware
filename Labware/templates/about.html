@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title % }About-Us{% endblock title % }
+{% block body %}
+{% block content %}
+{% endblock content %}
+<section id="hero1">
+  <div class="hero1-container">
+    <!-- <div class="col-md-5 p-lg-5 mx-auto my-5" style="color: black;">
+      <a class="btn btn-outline-secondary my-10 " style="display: flex; justify-content: center; color: blanchedalmond; margin-top: 10rem;" href="/about">About us</a>
+    </div> -->
+    <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+  </div>
+</section>
+<style>
+  p {
+    text-align: justify;
+  }
+</style>
+<div class="px-4 text-center" style="text-align: center;">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static '/images/about1.jpg' %}" alt="Labware" width="500rem">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 lh-1 mb-3">About us</h1>
+            <p class="lead fw-normal ">THE GLASS COMAPNY INC is an DSO 901:2023 proprietary enterprise established in 2023 which specialises in the
+               manufacturing of quality scientific, laboratory and custom design glassware for education, research, process, quality control and industrial applications. 
+              The company also provides technical consultancy and delivers apt solutions in the design and manufacture of glassware for its clients both within Nation and abroad.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container col-xxl-8 px-4 py-6">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-12 col-lg-6">
+            <img src="{% static '/images/about2.jpg' %}" alt="Labware" width="500rem">
+          </div>
+          <div class="col-12 col-lg-6">
+            <!-- <h1 class="display-5 lh-1 mb-6">About us</h1> -->
+            <p class="lead fw-normal">The proprietorship has been promoted by Mr.Daniels who is an experienced professional having over 35 years of experience in marketing, manufacturing, and distributing laboratory glassware solutions for reaction units, lab equipments & consumables to industries and institutions</p>
+          </div>
+        </div>
+      </div>
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="{% static '/images/about3.jpg' %}" alt="Labware" width="500rem">
+          </div>
+          <div class="col-lg-6">
+            <p class="lead fw-normal ">The core strength of the enterprise is its ability to network extensively and its reach to clients in the field of pharmaceuticals, pharmaceuticals R&D, quality control labs and process industries, drug research labs, contract research and custom synthesis labs, central research institutes, universities, premier educational institutes, and biotech companies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="container col-xxl-8 px-4 py-6">
+        <div class="row flex-lg-row align-items-center g-5 py-5">
+          <div class="col-12 col-lg-6">
+            <img src="{% static '/images/about4.jpg' %}" alt="Labware" width="500rem">
+          </div>
+          <div class="col-12 col-lg-6">
+            <!-- <h1 class="display-5 lh-1 mb-6">About us</h1> -->
+            <p class="lead fw-normal">The experience of the owner provides The Glass Company the ability to diagnose and deliver the right solutions to customers, while working alongside them. This skill has been honed from innumerable transactions and solutions delivered over the years.</p>
+          </div>
+        </div>
+      </div>
+{% endblock body %}
